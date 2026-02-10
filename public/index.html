@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mark-port</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github.min.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar sidebar-left" id="file-sidebar">
+      <div class="sidebar-header">
+        <h2>Files</h2>
+        <button class="toggle-btn" id="toggle-files" aria-label="Toggle file tree">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M4 8l4-4v8z"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="file-tree" id="file-tree"></nav>
+    </aside>
+
+    <main class="content" id="content">
+      <article class="markdown-body" id="markdown-content">
+        <div class="empty-state">
+          <p>Select a file to preview</p>
+        </div>
+      </article>
+    </main>
+
+    <aside class="sidebar sidebar-right" id="toc-sidebar">
+      <div class="sidebar-header">
+        <h2>Contents</h2>
+        <button class="toggle-btn" id="toggle-toc" aria-label="Toggle table of contents">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M12 8l-4 4V4z"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="toc" id="toc"></nav>
+    </aside>
+  </div>
+
+  <div class="status-bar" id="status-bar">
+    <span class="status-indicator" id="status-indicator"></span>
+    <span class="status-text" id="status-text">Connecting...</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
