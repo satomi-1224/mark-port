@@ -71,22 +71,31 @@ This is a Markdown real-time preview CLI tool built with TypeScript.
 **Test Framework:**
 
 - **Vitest**: Testing framework with native ESM and TypeScript support
-- **In-Source Testing**: Tests are written in the same files using `if (import.meta.vitest)` blocks
-- **Globals Enabled**: Use `describe`, `it`, `expect` directly without imports
+- **Separate Test Files**: Tests are located in the `tests/` directory, mirroring the `src/` structure
+- **Globals Enabled**: Use `describe`, `it`, `expect` directly with imports from vitest
 
-**Test Structure:**
+**Test Directory Structure:**
+
+```
+tests/
+├── markdown.test.ts      # Tests for src/markdown.ts
+├── fileTree.test.ts      # Tests for src/fileTree.ts
+├── watcher.test.ts       # Tests for src/watcher.ts
+└── routes/
+    └── api.test.ts       # Tests for src/routes/api.ts
+```
+
+**Test File Structure:**
 
 ```typescript
-// At the end of each source file
-if (import.meta.vitest) {
-  const { describe, it, expect } = import.meta.vitest;
+import { describe, it, expect } from 'vitest';
+import { functionName } from '../src/module.js';
 
-  describe('functionName', () => {
-    it('should do something', () => {
-      expect(result).toBe(expected);
-    });
+describe('functionName', () => {
+  it('should do something', () => {
+    expect(result).toBe(expected);
   });
-}
+});
 ```
 
 **Test Requirements:**
@@ -94,16 +103,15 @@ if (import.meta.vitest) {
 - All exported functions MUST have corresponding tests
 - Tests MUST cover both success and error cases
 - Use `fs-fixture` with `createFixture()` for file system mocking
-- NEVER use `await import()` dynamic imports in test blocks
 - NEVER use mocks when real implementations can be tested
 - Test file paths MUST use the fixture's temporary directory
 
 **Test Coverage Guidelines:**
 
-- `markdown.ts` - Test HTML output, heading extraction, code highlighting, Mermaid blocks
-- `fileTree.ts` - Test directory traversal, filtering, sorting, edge cases
-- `watcher.ts` - Test event emission, file filtering
-- `routes/api.ts` - Test API responses, error handling, path traversal prevention
+- `tests/markdown.test.ts` - Test HTML output, heading extraction, code highlighting, Mermaid blocks
+- `tests/fileTree.test.ts` - Test directory traversal, filtering, sorting, edge cases
+- `tests/watcher.test.ts` - Test event emission, file filtering
+- `tests/routes/api.test.ts` - Test API responses, error handling, path traversal prevention
 
 **Post-Change Workflow:**
 
