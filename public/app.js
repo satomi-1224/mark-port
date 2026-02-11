@@ -141,7 +141,7 @@
 
   async function initMermaid() {
     if (typeof mermaid !== 'undefined') {
-      mermaid.initialize({ startOnLoad: false, theme: 'default' });
+      mermaid.initialize({ startOnLoad: false, theme: 'dark' });
       const mermaidDivs = document.querySelectorAll('.mermaid');
       if (mermaidDivs.length > 0) {
         // Reset processed state for re-rendering

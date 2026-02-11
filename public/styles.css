@@ -5,13 +5,16 @@
 }
 
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f6f8fa;
-  --bg-tertiary: #f0f0f0;
-  --text-primary: #24292f;
-  --text-secondary: #57606a;
-  --border-color: #d0d7de;
-  --accent-color: #0969da;
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #21262d;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --border-color: #30363d;
+  --accent-color: #58a6ff;
+  --accent-hover: #79b8ff;
+  --success-color: #3fb950;
+  --error-color: #f85149;
   --sidebar-width: 260px;
   --toc-width: 240px;
   --status-height: 28px;
@@ -152,7 +155,7 @@ html, body {
 }
 
 .tree-item.active {
-  background: rgba(9, 105, 218, 0.1);
+  background: rgba(88, 166, 255, 0.15);
   color: var(--accent-color);
 }
 
@@ -321,7 +324,7 @@ html, body {
 .toc-item.active {
   color: var(--accent-color);
   border-left-color: var(--accent-color);
-  background: rgba(9, 105, 218, 0.05);
+  background: rgba(88, 166, 255, 0.1);
 }
 
 .toc-item[data-level="1"] { padding-left: 16px; font-weight: 500; }
@@ -348,11 +351,11 @@ html, body {
   height: 8px;
   border-radius: 50%;
   margin-right: 8px;
-  background: #d1242f;
+  background: var(--error-color);
 }
 
 .status-indicator.connected {
-  background: #1a7f37;
+  background: var(--success-color);
 }
 
 /* Responsive */
