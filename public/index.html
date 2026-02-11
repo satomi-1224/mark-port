@@ -9,6 +9,12 @@
 </head>
 <body>
   <div class="app">
+    <button class="sidebar-open-btn sidebar-open-left" id="open-files" aria-label="Open file tree">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M6 8l4-4v8z"/>
+      </svg>
+    </button>
+
     <aside class="sidebar sidebar-left" id="file-sidebar">
       <div class="sidebar-header">
         <h2>Files</h2>
@@ -40,6 +46,12 @@
       </div>
       <nav class="toc" id="toc"></nav>
     </aside>
+
+    <button class="sidebar-open-btn sidebar-open-right" id="open-toc" aria-label="Open table of contents">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M10 8l-4 4V4z"/>
+      </svg>
+    </button>
   </div>
 
   <div class="status-bar" id="status-bar">

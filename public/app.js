@@ -11,6 +11,8 @@
     tocSidebar: document.getElementById('toc-sidebar'),
     toggleFiles: document.getElementById('toggle-files'),
     toggleToc: document.getElementById('toggle-toc'),
+    openFiles: document.getElementById('open-files'),
+    openToc: document.getElementById('open-toc'),
   };
 
   let currentFile = null;
@@ -183,13 +185,23 @@
 
   function setupToggleButtons() {
     elements.toggleFiles.onclick = () => {
-      elements.fileSidebar.classList.toggle('collapsed');
-      elements.fileSidebar.classList.toggle('open');
+      elements.fileSidebar.classList.add('collapsed');
+      elements.fileSidebar.classList.remove('open');
     };
 
     elements.toggleToc.onclick = () => {
-      elements.tocSidebar.classList.toggle('collapsed');
-      elements.tocSidebar.classList.toggle('open');
+      elements.tocSidebar.classList.add('collapsed');
+      elements.tocSidebar.classList.remove('open');
+    };
+
+    elements.openFiles.onclick = () => {
+      elements.fileSidebar.classList.remove('collapsed');
+      elements.fileSidebar.classList.add('open');
+    };
+
+    elements.openToc.onclick = () => {
+      elements.tocSidebar.classList.remove('collapsed');
+      elements.tocSidebar.classList.add('open');
     };
   }
 

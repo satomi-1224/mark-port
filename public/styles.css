@@ -53,6 +53,50 @@ html, body {
   border: none;
 }
 
+/* Sidebar open buttons (shown when sidebar is collapsed) */
+.sidebar-open-btn {
+  display: none;
+  position: fixed;
+  top: 12px;
+  z-index: 101;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  padding: 8px;
+  color: var(--text-secondary);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-open-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.sidebar-open-left {
+  left: 12px;
+}
+
+.sidebar-open-right {
+  right: 12px;
+}
+
+.sidebar-left.collapsed ~ .content ~ .sidebar-right ~ .sidebar-open-left,
+.sidebar-left.collapsed + .content .sidebar-open-left {
+  display: flex;
+}
+
+/* Show open button when sidebar is collapsed */
+.app:has(.sidebar-left.collapsed) .sidebar-open-left {
+  display: flex;
+}
+
+.app:has(.sidebar-right.collapsed) .sidebar-open-right {
+  display: flex;
+}
+
 .sidebar-header {
   display: flex;
   align-items: center;
