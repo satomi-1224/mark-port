@@ -1,8 +1,18 @@
-# mark-port
+<p align="center">
+  <img src="https://raw.githubusercontent.com/satomi-1224/mark-port/main/logo.png" alt="mark-port logo" width="200">
+</p>
 
-A real-time Markdown preview CLI tool.
+<h1 align="center">mark-port</h1>
 
-Simple and fast Markdown previewer that automatically refreshes the browser when you edit files.
+<p align="center">
+  A real-time Markdown preview CLI tool.<br>
+  Simple and fast Markdown previewer that automatically refreshes the browser when you edit files.
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/mark-port"><img src="https://img.shields.io/npm/v/mark-port.svg" alt="npm version"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+</p>
 
 ## Features
 
@@ -89,20 +99,11 @@ mark-port README.md --no-open
 mark-port ./docs --no-watch
 ```
 
-## UI
+## Screenshot
 
-```
-┌─────────────┬──────────────────────────────┬─────────────┐
-│             │                              │             │
-│    File     │          Preview             │     TOC     │
-│    Tree     │                              │             │
-│             │                              │             │
-│  📁 docs    │  # Title                     │  · Title    │
-│    📄 a.md  │                              │  · Section  │
-│    📄 b.md  │  Content...                  │             │
-│             │                              │             │
-└─────────────┴──────────────────────────────┴─────────────┘
-```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/satomi-1224/mark-port/main/screenshot.png" alt="mark-port screenshot" width="800">
+</p>
 
 - **Left Panel**: Markdown file tree
 - **Center Panel**: Rendered Markdown
