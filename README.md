@@ -158,7 +158,7 @@ sequenceDiagram
 ### Setup
 
 ```bash
-git clone https://github.com/your-username/mark-port.git
+git clone https://github.com/satomi-1224/mark-port.git
 cd mark-port
 pnpm install
 ```

@@ -23,8 +23,16 @@
     "live-reload",
     "mermaid"
   ],
-  "author": "",
+  "author": "satomi-1224",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satomi-1224/mark-port.git"
+  },
+  "homepage": "https://github.com/satomi-1224/mark-port#readme",
+  "bugs": {
+    "url": "https://github.com/satomi-1224/mark-port/issues"
+  },
   "dependencies": {
     "@fastify/static": "^8.0.0",
     "chokidar": "^4.0.0",
